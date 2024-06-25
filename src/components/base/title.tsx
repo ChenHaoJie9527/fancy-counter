@@ -6,7 +6,7 @@ interface Props {
 }
 export default function Title({ name, children }: Props) {
   return (
-    <h1 className=" font-mono text-2xl not-italic font-medium tracking-[2px]">
+    <h1 className=" text-2xl not-italic font-medium ">
       {children ? children : name}
     </h1>
   );
