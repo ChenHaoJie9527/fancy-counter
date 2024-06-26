@@ -1,4 +1,4 @@
-import React, { Ref, forwardRef, useImperativeHandle, useState } from "react";
+import React, { Ref, forwardRef, useEffect, useImperativeHandle, useState } from "react";
 
 export type CRef = {
   increment: () => void;
@@ -27,7 +27,13 @@ function Counter(props: Props, ref: Ref<CRef>) {
       setCount(0);
     },
   }));
-
+  useEffect(() => {
+    window.addEventListener("keydown", (e) => {
+      if (e.code === "Space") {
+        setCount(count + 1)
+      }
+    });
+  }, [count]);
   return <div className="text-9xl my-[24px]">{count}</div>;
 }
 export default forwardRef(Counter);
