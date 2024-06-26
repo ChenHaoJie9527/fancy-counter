@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import Title from "./base/title";
 import Counter, { CRef } from "./base/counter";
 import Button from "./base/button";
+import Reset from "./svgs/reset.svg?react";
 
 export default function Card() {
   const counterRef = useRef<CRef>(null);
@@ -17,21 +18,7 @@ export default function Card() {
           }}
           className=" cursor-pointer"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#7f7a7a"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            className="lucide lucide-undo-2 svg-reset"
-          >
-            <path d="M9 14 4 9l5-5" />
-            <path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11" />
-          </svg>
+          <Reset />
         </Button>
       </div>
       <div className="flex w-full min-h-[80px] items-center justify-center ">
