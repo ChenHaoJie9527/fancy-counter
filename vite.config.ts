@@ -19,8 +19,11 @@ export default defineConfig({
           'removeComments',
           'removeEmptyText',
           'removeUselessStrokeAndFill'
-        ]
-      }
+        ],
+      },
+      icon: true,
+      svgo: true,
+      prettier: true,
     }
   })],
 })
