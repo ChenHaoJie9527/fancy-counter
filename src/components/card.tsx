@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import Title from "./base/title";
 import Counter, { CRef } from "./base/counter";
 import Button from "./base/button";
-import Reset from "./svgs/reset.svg?react";
+import ResetIconSvg from "./svgs/reset.svg?react";
 
 export default function Card() {
   const counterRef = useRef<CRef>(null);
@@ -18,7 +18,7 @@ export default function Card() {
           }}
           className=" cursor-pointer"
         >
-          <Reset />
+          <ResetIconSvg />
         </Button>
       </div>
       <div className="flex w-full min-h-[80px] items-center justify-center ">
