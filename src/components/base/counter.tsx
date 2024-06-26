@@ -12,6 +12,9 @@ function Counter(props: Props, ref: Ref<CRef>) {
   const [count, setCount] = useState(0);
   useImperativeHandle(ref, () => ({
     increment() {
+      if (count >= 5) {
+        return;
+      }
       setCount(count + 1);
     },
     decrement() {
