@@ -2,7 +2,8 @@ import React, { useRef } from "react";
 import Title from "./base/title";
 import Counter, { CRef } from "./base/counter";
 import Button from "./base/button";
-import ResetIconSvg from "./svgs/reset.svg?react";
+import ResetIconSvg from "./icons/reset.svg?react";
+import ButtonContainer from "./base/button-container";
 
 export default function Card() {
   const counterRef = useRef<CRef>(null);
@@ -21,7 +22,7 @@ export default function Card() {
           <ResetIconSvg />
         </Button>
       </div>
-      <div className="flex w-full min-h-[80px] items-center justify-center ">
+      <ButtonContainer>
         <Button
           key="increment"
           callback={() => {
@@ -40,7 +41,7 @@ export default function Card() {
         >
           -
         </Button>
-      </div>
+      </ButtonContainer>
     </div>
   );
 }
